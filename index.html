@@ -350,7 +350,7 @@ $(document).ready(function() {
         <div class="go_menu">MENU</div>
     </div><scroll-page id="about_page">
     <div class="second_container">
-        <span id="about_photo"><img src="cafe.jpg"></span></scroll-page>
+        <span id="about_photo"><img src="about.jpg"></span></scroll-page>
     <div id="about_ment" class="slide_right">
         <div id="about_ment_title">유이스크림만의 맛을 느껴보세요!</div>
         <div id="about_ment_subtitle">Taste UICE CREAM's flavor!</div>
@@ -397,19 +397,7 @@ $(document).ready(function() {
         개인 매장치고도 꽤 히트치고 티비도 나오고<br>
         </div></div>
         <span id="interior_photo"><img src="cafe.jpg"></span></div>
-        <div class="test">
-            brbarlsblkajdfkla
-            brbarlsblkajdfklabrbarlsblkajdfklabrbarlsblkajdfklabrbarlsblkajdfklabrbarlsblkajdfkla
-            brbarlsblkajdfklabrbarlsblkajdfklabrbarlsblkajdfkla
-            brbarlsblkajdfklabrbarlsblkajdfkla
-            brbarlsblkajdfkla
-            brbarlsblkajdfkla
-            brbarlsblkajdfkla
-            brbarlsblkajdfkla
-            brbarlsblkajdfkla
-            brbarlsblkajdfkla
 
-        </div>
 </body>
 <style>
     .test {
@@ -482,6 +470,45 @@ $(document).ready(function() {
                 font-size: 15pt;
             }
           }
+        @media screen and (max-width: 480px) {
+        .back_container {
+            background-size: 250%;
+            background-position-x: -200px;
+        }
+         .address_container {
+             font-size: 5pt;
+         }   
+         #logo img {
+             margin-top: 10px;
+             width: 100px;
+             margin-right: 0px;
+         }
+         #title_icecream {
+             position: relative;
+             top: -20px
+         }
+         #big_title_container {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%; top: 88%;
+         }
+         #big_title_container img {
+             width: 400px;
+         }
+         #small_title_container {
+             position: absolute;
+             transform: translate(-50%, -50%);
+             left: 50%;
+         }
+         #small_title_container img{
+            width: 300px;
+         }
+        .go_menu {
+            position: relative;
+                top: -20px;
+                font-size: 10pt;
+        }
+        }
 </style>
 
 </html>
