@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <script>
+        /*메뉴스크롤고정*/
+        $( document ).ready( function() {
+          var navOffset = $( '.menu' ).offset();
+          $( window ).scroll( function() {
+            if ( $( document ).scrollTop() > navOffset.top ) {
+              $( '.menu' ).addClass( 'menuFixed' );
+            }
+            else {
+              $( '.menu' ).removeClass( 'menuFixed' );
+            }
+          });
+        } );
+        /////////////////////////////////////////////
+        $( document ).ready( function() {
+        $( '#small_title_container' ).fadeIn( 500 );
+      } );
+      $( document ).ready( function() {
+        $( '#big_title_container' ).delay(1000).fadeIn( 500 );
+     } );
+     //////////////////////////////////////////////////
+     $(document).ready(function() {
+    $(window).scroll( function(){
+        $('.slide_right').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'margin-left':'0px'},500);
+            }
+            
+        }); 
+    });
+});
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.slide_left').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'margin-left':'0px'},500);
+            }
+            
+        }); 
+    });
+});
+/////////////////////////////////////////////////
+$(document).ready(function() {
+    /* 1 */
+    $(window).scroll( function(){
+        /* 2 */
+        $('.hide').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* 3 */
+            if( bottom_of_window > bottom_of_object/1 ){
+                $(this).animate({'opacity':'1'},500);
+            }
+        }); 
+    });
+});
+
+
+    </script>
+    
+</head>
+<style>
+    .slide_right {
+        max-width: 100%;
+        margin-left: -100%;
+        z-index: 0;
+    }
+
+    .slide_left {
+        max-width: 100%;
+        margin-left: 100%;
+        z-index: 0;
+    }
+    .hide {
+    opacity: 0;
+} 
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    .back_container {
+        background-image:url('back_background.jpg');
+        background-attachment: fixed;
+        background-size: 100%;
+        background-position-y: -120px;
+       
+    }
+    body {
+        margin: 0px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .address_container {
+        background-color: #ffea74;
+        color: white;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: 600;
+    }
+    .first_container {
+    background-color: #ff6a9f;
+    height: 800px;
+    }
+    #title_icecream {
+        width: 500px;
+        position: relative;
+        left: 49%; top: -40px;
+        transform: translate(-50%);
+    }
+    /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+    .menuFixed {
+               position: fixed;
+               top: 2%; left: -60px;
+               transform: translate(50%);
+               width: 100PX;
+               z-index:  999999;
+               opacity: 0.3;
+            }
+    .menu {
+        transition: 1.5s;
+    }
+    .menu a {
+        text-decoration: none;
+        color: #df3072;
+        margin-left: 20px;
+        font-weight: 800;
+        font-size: 16pt;
+    }
+    #menus {
+        background-color: #ff6a9f;
+        padding-top: 8px;
+        justify-content: space-between;
+        display: flex;
+    }
+    #logo a {
+        text-decoration: none;
+        color: white;
+        margin-right: 20px;
+        position: relative;
+        bottom: 22px;
+    }
+    #logo img {
+        position: relative;
+        width: 180px
+    }
+    /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+
+    #big_title_container {
+        position: absolute;
+        top: 420px; left: 50%;
+        transform: translate(-50%);
+        display: none;
+    }
+
+    #small_title_container {
+        position: relative;
+       text-align: center;
+       bottom: 47% ;
+       display: none;}
+     /**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+    .go_menu {
+       color: white;
+       font-size: 25pt;
+       border: solid 2px white;
+       padding-left: 50px;
+       padding-right: 50px;
+       padding-bottom: 3px;
+       position: relative;
+       display: inline-block;
+       bottom: 60px; left: 50%;
+       transform: translate(-50%, -50%)
+    }
+ /**//** /**//** /**//** /**//** /**//** /**/
+    .second_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    }
+    #about_photo {
+        overflow: hidden;
+        text-align: right;
+        height: 700px;
+        z-index:999;
+        
+    }
+    #about_ment {
+       
+        width: 100%;
+        height: 60%;
+        position: relative;
+        top: 20%;
+        overflow: hidden;
+      
+    }
+    #about_photo img {
+        width: 170%;
+        vertical-align: bottom;
+    }
+    #about_ment {
+        text-align: center;
+    }
+
+    #about_ment_title{
+        font-size: 20pt;
+        font-weight: 900;
+    }
+    #about_ment_subtitle {
+        font-family: 'Rancho', cursive;
+        font-size: 15pt;
+        color: rgb(41, 40, 40);
+    }
+    #about_ment_small {
+        font-weight: 700;
+        color:grey;
+    }
+/**//**//**//**//**//**//**//**//**//**/
+    .third_container {
+        position: relative;
+        width: 100%;
+        height: 100%;;
+    }
+    .third_container_text1{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .지방은_적게 {
+        color: white;
+        font-size: 50pt;
+        font-weight: 900;
+        text-align: center;
+    }
+    .made_with_blabla {
+        color: white;
+        font-family: 'Rancho', cursive;
+        font-size: 25pt;
+        text-align: center;
+    }
+    .third_container_text2{
+        position: relative;
+        margin-top: 420px; 
+        margin-bottom: 55pt;left: 50%;
+        transform: translate(-50%);
+        border-radius: 10px;
+        border: white solid 3px;
+        display: inline-block;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .third_menu {
+        color: white;
+        font-size: 20pt;
+        font-weight: 900;
+    }
+    /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+    .fourth_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    }
+    #interior_photo {
+        overflow: hidden;
+        text-align: right;
+        z-index: 999;
+        
+    }
+    #interior_ment {
+       
+        width: 100%;
+        height: 60%;
+        position: relative;
+        top: 20%;
+        overflow: hidden;
+      
+    }
+    #interior_photo img {
+        width: 120%;
+        vertical-align: bottom;
+    }
+    #interior_ment {
+        text-align: center;
+    }
+
+    #interior_ment_title{
+        font-size: 20pt;
+        font-weight: 900;
+    }
+    #interior_ment_subtitle {
+        font-family: 'Rancho', cursive;
+        font-size: 15pt;
+        color: rgb(41, 40, 40);
+    }
+    #interior_ment_small {
+        font-weight: 700;
+        color:grey;
+    }
+</style>
+<body>
+    <div class="back_container">
+    <div class="address_container">
+        울산광역시 남구 중앙로120번길 대명루첸 상가 | 연중무휴 11:00~21:00
+    </div>
+    <div id="menus">
+        <div class="menu">
+        <a href="#about_page">ABOUT</a>
+        <a href="#special_page">SPECIAL</a>
+        <a href="#cooking_page">CLASS</a>
+        <a href="#">EVENT</a>
+        </div>
+        <div id="logo">
+            <a href="#"><img src="logo.png"></a>
+        </div>
+      </div>
+    <div class="first_container">
+      <div id="title_icecream_container"> 
+        <img src="title_icecream.png" id="title_icecream">
+       </div>
+       <div id="big_title_container">
+        <img src="big_title.png" id="big_title">
+       </div>
+       <div id="small_title_container">
+        <img src="small_title.png" id="small_title">
+        </div>
+        <div class="go_menu">MENU</div>
+    </div><scroll-page id="about_page">
+    <div class="second_container">
+        <span id="about_photo"><img src="about.jpg"></span></scroll-page>
+    <div id="about_ment" class="slide_right">
+        <div id="about_ment_title">유이스크림만의 맛을 느껴보세요!</div>
+        <div id="about_ment_subtitle">Taste UICE CREAM's flavor!</div>
+        <br>
+        <div id="about_ment_small">원하는 맛을 마음껏 골라보세요!<br>
+            고르셨다면 다양한 토핑을 추가해보세요!<br>
+                 <br>
+            이 다음부터는 무슨 말을 해야할 지 모르겠지만<br>
+            일단은 디자인을 위해서 블라블라블라<br>
+            블라블라 가나다라마바사<br>
+            이런 아이스크림 가게가 진짜로있었으면<br>
+            좋겠당 한국에서도 먹힐까요?<br>
+            해외에서는 꽤 인기 있는 것 같더라고요<br>
+            개인 매장치고도 꽤 히트치고 티비도 나오고<br>
+           </div>
+    </div>
+    </div>
+    <scroll-page id="special_page">
+    <div class="third_container"></scroll-page>
+      <div class="third_container_text1">
+        <span class="지방은_적게 hide">지방은 적게, 달콤함은 최고!</span>
+        <br> <span class="made_with_blabla hide">Made with low fat and fresh cream!</span>
+      </div>
+      <div class="third_container_text2">
+        <span class="third_menu">저지방 메뉴</span>
+      </div></div>
+    </div>
+</div>
+<scroll-page id="cooking_page">
+<div class="fourth_container"></scroll-page>
+<div id="interior_ment" class="slide_left">
+    <div id="interior_ment_title">여러분의 취향대로 만들어보세요!</div>
+    <div id="interior_ment_subtitle">Chellenge you flavor!</div>
+    <br>
+    <div id="interior_ment_small">단 맛? 상큼한 맛?<br>
+        무엇이든 준비되어 있어요!<br>
+             <br>
+        이 다음부터는 무슨 말을 해야할 지 모르겠지만<br>
+        일단은 디자인을 위해서 블라블라블라<br>
+        블라블라 가나다라마바사<br>
+        이런 아이스크림 가게가 진짜로있었으면<br>
+        좋겠당 한국에서도 먹힐까요?<br>
+        해외에서는 꽤 인기 있는 것 같더라고요<br>
+        개인 매장치고도 꽤 히트치고 티비도 나오고<br>
+        </div></div>
+        <span id="interior_photo"><img src="cafe.jpg"></span></div>
+</body>
+</html>
