@@ -183,14 +183,42 @@ $(document).ready(function() {
        color: white;
        font-size: 25pt;
        border: solid 2px white;
-       padding-left: 50px;
-       padding-right: 50px;
+       padding-left: 40px;
+       padding-right: 30px;
        padding-bottom: 3px;
        position: relative;
        display: inline-block;
        bottom: 60px; left: 50%;
-       transform: translate(-50%, -50%)
+       transform: translate(-50%, -50%);
+       transition: 0.5s
     }
+    .link {
+        font-weight: 900;
+        animation: blink-animation 0.6s  ease-out infinite alternate;
+        -webkit-animation: blink-animation 0.6s ease-out infinite alternate;
+    }
+    .go_menu:hover .link{
+    }
+    .go_menu:hover {
+        padding-left: 60px;
+        padding-right: 50px;
+    }
+    @keyframes blink-animation {
+   from {
+       opacity: 0;
+   }
+   to {
+       opacity: 0.7;
+   }
+}
+@-webkit-keyframes blink-animation {
+    from {
+       opacity: 0;
+   }
+   to {
+       opacity: 0.7;
+   }
+}
  /**//** /**//** /**//** /**//** /**//** /**/
     .second_container {
     display: grid;
@@ -274,6 +302,11 @@ $(document).ready(function() {
         color: white;
         font-size: 20pt;
         font-weight: 900;
+        transition: 0.5s;
+    }
+    .third_menu:hover {
+        padding-left: 20px;
+        padding-right: 20px;
     }
     /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
     .fourth_container {
@@ -331,7 +364,7 @@ $(document).ready(function() {
         <a href="#about_page">ABOUT</a>
         <a href="#special_page">SPECIAL</a>
         <a href="#cooking_page">CLASS</a>
-        <a href="#">EVENT</a>
+        <a href="#">MENU</a>
         </div>
         <div id="logo">
             <a href="#"><img src="logo.png"></a>
@@ -347,7 +380,7 @@ $(document).ready(function() {
        <div id="small_title_container">
         <img src="small_title.png" id="small_title">
         </div>
-        <div class="go_menu">MENU</div>
+        <div class="go_menu">MENU <span class="link">>></div></span>
     </div><scroll-page id="about_page">
     <div class="second_container">
         <span id="about_photo"><img src="about.jpg"></span></scroll-page>
@@ -375,7 +408,7 @@ $(document).ready(function() {
         <br> <span class="made_with_blabla hide">Made with low fat and fresh cream!</span>
       </div>
       <div class="third_container_text2">
-        <span class="third_menu">저지방 메뉴</span>
+        <span class="third_menu">저지방 메뉴<span class="link"> >></span>
       </div></div>
     </div>
 </div>
