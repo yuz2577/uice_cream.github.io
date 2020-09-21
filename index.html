@@ -557,10 +557,10 @@ $(document).ready(function() {
             <div class="grid4_">
                 <div class="grid4_title">Another Page?</div>
                 <div class="firstPage">
-                <i class="fas fa-walking"></i> <a href="https://yuz2577.github.io/">https://yuz2577.github.io/</a> <br>
+                <i class="fas fa-walking"></i><br><a href="https://yuz2577.github.io/">https://yuz2577.github.io/</a> <br>
                 첫번째로 만든 연습사이트(일본어/한국어 지원 | 반응형 미완성)</div>
                 <div class="SecondPage">
-                <i class="fas fa-walking"></i> <a href="https://yuz2577.github.io/uice_cream.github.io/">https://yuz2577.github.io/uice_cream.github.io/</a> <br>
+                <i class="fas fa-walking"></i><br> <a href="https://yuz2577.github.io/uice_cream.github.io/">https://yuz2577.github.io/uice_cream.github.io/</a> <br>
                 두번째로 만든 연습사이트(슬라이드 추가 | 반응형 개발진행)(현재 페이지)
         </div></div>
     </div>
@@ -603,9 +603,9 @@ $(document).ready(function() {
     .footer {
         background-color: #48341d;
         display :grid;
-        grid-template-columns: 0.2fr 0.2fr 0.2fr 0.4fr;
+        grid-template-columns: 0.33fr 0.33fr 0.33fr 1fr;
         color: white;
-        text-align:right;
+        text-align:center;
         height: 300px;
         font-size: 10pt;
 
@@ -741,9 +741,13 @@ $(document).ready(function() {
           }
 
         @media screen and (max-width: 496px) {
+        .footer {
+            grid-template-columns: 0.5fr 0.5fr 0.6fr 1fr;
+        }
+        
         .third_container_text2{
             margin-top: 190px;
-        }
+        }   
 
         
         #big_choco_choco {
@@ -760,9 +764,13 @@ $(document).ready(function() {
         .grid_title, .grid4_title{
             font-size: 8pt;
         }
+
+        .footer i {
+            font-size: 6pt;
+        }
         .footer {
             font-size : 3px;
-            height: 150px;
+            height: 200px;
 
         }
 
