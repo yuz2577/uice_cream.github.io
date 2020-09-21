@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="to_top.css">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
@@ -10,6 +11,7 @@
     <title>Uice Cream!</title>
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <style>
+
 /**/
 .scroll_container {
     position: relative;
@@ -48,7 +50,7 @@
     position: relative;
     top: -200px;
     left: 100%;
-    z-index: 99999;
+    z-index: 9999;
 
 }
 .icon-scroll2,
@@ -56,7 +58,7 @@
     position: absolute;
     left: 50%;
     top: 100px;
-    z-index: 99999
+    z-index: 9999
 }
 .icon-scroll2 {
     width: 30px;
@@ -298,7 +300,7 @@ $(document).ready(function() {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             /* 3 */
             if( bottom_of_window > bottom_of_object/1 ){
-                $(this).animate({'opacity':'1'},300);
+                $(this).animate({'opacity':'1'},800);
             }
         }); 
     });
@@ -578,7 +580,7 @@ $(document).ready(function() {
     }
 </style>
 <body>
-    <div class="back_container">
+    <div class="back_container" id="top">
     <div class="address_container">
         울산광역시 남구 중앙로120번길 대명루첸 상가 | 연중무휴 11:00~21:00
     </div>
@@ -587,7 +589,7 @@ $(document).ready(function() {
         <a href="#about_page">ABOUT</a>
         <a href="#special_page">SPECIAL</a>
         <a href="#cooking_page">CLASS</a>
-        <a href="#">MENU</a>
+        <a href="#another_page">MENU</a>
         </div>
         <div id="logo">
             <a href="#"><img src="logo.png"></a>
@@ -658,7 +660,7 @@ $(document).ready(function() {
        
        </div>
         <span id="interior_photo"><img src="cafe.jpg"></span></div>
-        <div class="scroll4_container"><a href="#cooking_page" class="icon-scroll4"></a></div>
+        <div class="scroll4_container"><a href="#another_page" class="icon-scroll4"></a></div>
 <div class="back_background_second">
 
     <div class="back_ground_second_container">
@@ -692,7 +694,7 @@ $(document).ready(function() {
     });
     //
     </script>
-    <div class="footer">
+    <div class="footer" id="another_page">
         <div class="grid1">
             <div class="grid1_">
             <div class="grid_title">ADDRESS</div>
@@ -721,6 +723,8 @@ $(document).ready(function() {
                 두번째로 만든 연습사이트(슬라이드 추가 | 반응형 개발진행)(현재 페이지)
         </div></div>
     </div>
+    <a id="back-to-top" href="#top">GO TO TOP</a>
+    <script async src="to_top.js"></script>
 <style>
     .firstPage {
         margin-bottom: 5px;
@@ -821,6 +825,9 @@ $(document).ready(function() {
 
     
           @media screen and (max-width: 900px) {
+              #back-to-top {
+                  font-size: 10pt
+              }
               .icon-scroll, .icon-scroll2, .icon-scroll3, .icon-scroll4 {
                   display: none;
               }
