@@ -9,9 +9,159 @@
     <title>Document</title>
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
 <style>
+/**/
+.scroll_container {
+    position: relative;
+    top: -170px;
+}
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 99999
+}
+.icon-scroll {
+    width: 30px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.icon-scroll:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+.scroll2_container {
+    position: relative;
+    top: -200px;
+    left: 100%;
+    z-index: 99999;
+
+}
+.icon-scroll2,
+.icon-scroll2:before {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 99999
+}
+.icon-scroll2 {
+    width: 30px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.icon-scroll2:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: black;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+
+.scroll3_container {
+    position: relative;
+    top: -90px;
+}
+.icon-scroll3,
+.icon-scroll3:before {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 99999
+}
+.icon-scroll3 {
+    width: 30px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.icon-scroll3:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: white;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+.scroll4_container {
+    position: relative;
+    top: -200px;
+    left:-25%;
+    z-index: 99999;
+
+}
+.icon-scroll4,
+.icon-scroll4:before {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    z-index: 99999
+}
+.icon-scroll4 {
+    width: 30px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.icon-scroll4:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: black;
+    margin-left: -4px;
+    top: 8px;
+    border-radius: 4px;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: scroll
+}
+@keyframes scroll {
+    0% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(26px)
+    } }
+    /**/
+
 .slider-wrap {
 position: relative;
-margin-top: 40px;
+margin-top: 110px;
 width: 100%;
 }
 .slider {
@@ -147,7 +297,7 @@ $(document).ready(function() {
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             /* 3 */
             if( bottom_of_window > bottom_of_object/1 ){
-                $(this).animate({'opacity':'1'},500);
+                $(this).animate({'opacity':'1'},300);
             }
         }); 
     });
@@ -453,6 +603,7 @@ $(document).ready(function() {
         <img src="small_title.png" id="small_title">
         </div>
         <div class="go_menu hide">MENU <span class="link">>></div></span>
+        <div class="scroll_container"><a href="#about_page" class="icon-scroll"></a></div>
     </div><scroll-page id="about_page">
     <div class="second_container">
         <span id="about_photo"><img src="about.jpg"></span></scroll-page>
@@ -472,6 +623,7 @@ $(document).ready(function() {
             개인 매장치고도 꽤 히트치고 티비도 나오고<br>
            </div>
     </div>
+    <div class="scroll2_container"><a href="#special_page" class="icon-scroll2"></a></div>
     </div>
     <scroll-page id="special_page">
     <div class="third_container"></scroll-page>
@@ -481,6 +633,7 @@ $(document).ready(function() {
       </div>
       <div class="third_container_text2 hide">
         <span class="third_menu">저지방 메뉴<span class="link"> >></span>
+        <div class="scroll3_container"><a href="#cooking_page" class="icon-scroll3"></a></div>
       </div></div>
     </div>
 </div>
@@ -500,8 +653,11 @@ $(document).ready(function() {
         좋겠당 한국에서도 먹힐까요?<br>
         해외에서는 꽤 인기 있는 것 같더라고요<br>
         개인 매장치고도 꽤 히트치고 티비도 나오고<br>
-        </div></div>
+        </div>
+       
+       </div>
         <span id="interior_photo"><img src="cafe.jpg"></span></div>
+        <div class="scroll4_container"><a href="#cooking_page" class="icon-scroll4"></a></div>
 <div class="back_background_second">
 
     <div class="back_ground_second_container">
@@ -583,11 +739,12 @@ $(document).ready(function() {
         margin-bottom: 10px;
     }
     .grid4_{
-        text-align: center;
+        text-align: right;
+        margin-right: 20px;
     }
     .grid1_ ,.grid2_, .grid3_,.grid4_ {
         position: relative;
-        top: 50%;
+        top: 45%;
         transform: translate(0%, -50%)
 
     }
@@ -605,7 +762,7 @@ $(document).ready(function() {
         display :grid;
         grid-template-columns: 0.33fr 0.33fr 0.33fr 1fr;
         color: white;
-        text-align:center;
+        text-align:right;
         height: 300px;
         font-size: 10pt;
 
@@ -617,6 +774,7 @@ $(document).ready(function() {
         padding: 0px;
         margin: 5px;
     }
+
     
     .back_background_second  {
         background-image : url("brown_pattern.jpg");
@@ -662,6 +820,9 @@ $(document).ready(function() {
 
     
           @media screen and (max-width: 900px) {
+              .icon-scroll, .icon-scroll2, .icon-scroll3, .icon-scroll4 {
+                  display: none;
+              }
               .back_container {
                   background-position-y: -0px;
                   background-size: cover;
@@ -740,7 +901,7 @@ $(document).ready(function() {
             }
           }
 
-        @media screen and (max-width: 496px) {
+        @media screen and (max-width: 770px) {
         .footer {
             grid-template-columns: 0.5fr 0.5fr 0.6fr 1fr;
         }
