@@ -2,10 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style>
+.slider-wrap {
+position: relative;
+margin-top: 10px;
+width: 100%;
+}
+.slider {
+position: relative;
+width: 100%;
+height: 100%;
+top: 10px;
+}
+ul {
+margin: 0;
+padding: 0;
+}
+ul li {
+list-style: none;
+text-align: center;
+}
+ul li span {
+display: inline-flex;
+width: 480px;
+height: 350px;
+background: black;
+filter: brightness(1.1);
+}
+.slider-arrow {
+position: absolute;
+top: 50%;
+font-size: 30pt;
+font-weight: 600;
+background: white;
+color: brown;
+text-align: center;
+text-decoration: none;
+border-radius: 40%;
+padding-left: 10px;
+padding-right: 10px;
+opacity: 0.7;
+transition: 0.5s;
+}
+.slider-arrow:hover {
+    opacity: 1;
+}
+.sa-left {
+left: 10px;
+}
+.sa-right {
+right: 10px;
+}
+.black {
+background-image: url("under1.jpg");
+background-size: 100%;
+}
+.red {
+    background-image: url("under2.jpg");
+    background-size: 100%;
+    height: 350px;
+}
+.green {
+    background-image: url("under3.jpg");
+    background-size: 100%;
+    height: 350px;
+}
+.blue {
+    background-image: url("under4.jpg");
+    background-size: 100%;
+    height: 350px;
+}
+.yellow {
+    background-image: url("under5.jpg");
+    background-size: 100%;
+    height: 350px;
+}
+</style>
     <script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -127,16 +205,10 @@ $(document).ready(function() {
         position: relative;
         left: 49%; top: -40px;
         transform: translate(-50%);
+        
     }
     /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
-    .menuFixed {
-               position: fixed;
-               left: 50%; top: 0%;
-               transform: translate(-50%);
-               width: auto;
-               z-index:  999999;
-               opacity: 0.3;
-            }
+
     .menu {
         transition: 0.5s;
     }
@@ -430,20 +502,172 @@ $(document).ready(function() {
         개인 매장치고도 꽤 히트치고 티비도 나오고<br>
         </div></div>
         <span id="interior_photo"><img src="cafe.jpg"></span></div>
+<div class="back_background_second">
 
-</body>
+    <div class="back_ground_second_container">
+        <div class="choco_container hide">
+        <div id="big_choco"><img src="wide_choco.png"></div>
+        <div id="big_choco_choco"><img src="wide_choco_choco.png"></div>
+    </div>
+    </div>
+</div>
+<div class="slider-wrap">
+    <div class="slider hide">
+    <ul>
+    <li> <span class="black"></span> </li>
+    <li> <span class="red"></span> </li>
+    <li> <span class="yellow"></span> </li>
+    <li> <span class="blue"></span> </li>
+    <li> <span class="green"></span> </li>
+    </ul>
+    </div>
+    <a href="#" class="slider-arrow sa-left">&lt;</a> <a href="#" class="slider-arrow sa-right">&gt;</a> </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script> 
+    <script src="jquery.lbslider.js"></script> 
+    <script>
+        //슬라이더//
+    jQuery('.slider').lbSlider({
+        leftBtn: '.sa-left',
+        rightBtn: '.sa-right',
+        visible: 3,
+        autoPlay: true,
+        autoPlayDelay: 2
+    });
+    //
+    </script>
+    <div class="footer">
+        <div class="grid1">
+            <div class="grid1_">
+            <div class="grid_title">ADDRESS</div>
+            울산광역시 남구 중앙로 120번길
+        </div></div>
+        <div class="grid2">
+            <div class="grid2_">
+            <div class="grid_title">TELL</div>
+            052-123-4567
+        </div></div>
+        <div class="grid3">
+            <div class="grid3_">
+            <div class="grid_title">Social Page</div>
+            <a href="https://www.instagram.com/zyuzyuzyu_/?hl=ko" target="_blank"><i class="fab fa-instagram-square"></i></a> 
+            |  <a href="https://www.facebook.com/people/%EA%B9%80%EC%A7%80%EC%9C%A0/100003686183487" target="_blank"><i class="fab fa-facebook-square"></i></a> 
+            |  <a href="#"></a><i class="fab fa-twitter-square"> |</i></a>
+        </div></div>
+        <div class="grid4">
+            <div class="grid4_">
+                <div class="grid4_title">Another Page?</div>
+                <div class="firstPage">
+                <i class="fas fa-walking"></i> <a href="https://yuz2577.github.io/">https://yuz2577.github.io/</a> <br>
+                첫번째로 만든 연습사이트(일본어/한국어 지원 | 반응형 미완성)</div>
+                <div class="SecondPage">
+                <i class="fas fa-walking"></i> <a href="https://yuz2577.github.io/uice_cream.github.io/">https://yuz2577.github.io/uice_cream.github.io/</a> <br>
+                두번째로 만든 연습사이트(슬라이드 추가 | 반응형 개발진행)(현재 페이지)
+        </div></div>
+    </div>
 <style>
-    .test {
-        background-color: teal;
+    .firstPage {
+        margin-bottom: 5px;
     }
+    .grid4 a {
+        color: white;
+        text-decoration-color: #d8c1a5;
+    }
+    .grid4 i {
+        font-size: 15pt;
+        
+    }
+    .grid4_title {
+        color: #d8c1a5;
+        font-size: 17pt;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    .grid4_{
+        text-align: center;
+    }
+    .grid1_ ,.grid2_, .grid3_,.grid4_ {
+        position: relative;
+        top: 50%;
+        transform: translate(0%, -50%)
+
+    }
+    .grid_title{
+        font-size: 15pt;
+        color: #cfb89d;
+    }
+    .grid3 i {
+        color: whitesmoke;
+        text-decoration: none;
+        font-size :13pt;
+    }
+    .footer {
+        background-color: #48341d;
+        display :grid;
+        grid-template-columns: 0.2fr 0.2fr 0.2fr 0.4fr;
+        color: white;
+        text-align:right;
+        height: 300px;
+        font-size: 10pt;
+
+    }
+    .grid1, .grid2, .grid3, .grid4 {
+        display: inline;
+        position: relative;
+        
+        padding: 0px;
+        margin: 5px;
+    }
+    
+    .back_background_second  {
+        background-image : url("brown_pattern.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+        position: relative;
+        height: 100%;
+        
+       
+    }
+    .choco_container {
+        display: inline-table;
+    }
+
+    #big_choco {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        background-size: cover;
+        z-index: 999;
+       
+   
+    }
+    #big_choco img {
+        position: relative;
+        width: 100%;
+        height: 90%;
+    }
+    #big_choco_choco {
+        position: absolute;
+        overflow: hidden;
+        z-index: 999;
+        top: 100px;
+       
+   
+    }
+    #big_choco_choco img {
+        position: relative;
+        width: 100%;
+    }
+
     
           @media screen and (max-width: 900px) {
               .back_container {
                   background-position-y: -0px;
                   background-size: 140%;
               }
+             
               .menuFixed{
                   width: 100%;
+                  
               }
               
               .menu a{
@@ -515,6 +739,30 @@ $(document).ready(function() {
           }
 
         @media screen and (max-width: 480px) {
+        .third_container_text2{
+            margin-top: 190px;
+        }
+        
+        #big_choco_choco {
+            position: absolute;
+            top:40px;
+
+        }
+        .slider-wrap {
+            position: relative;
+            height: 200px;
+        }
+        .grid_title, .grid4_title{
+            font-size: 8pt;
+        }
+        .footer {
+            font-size : 3px;
+            height: 150px;
+
+        }
+        .back_background_second_container {
+            height: 900px;
+        }
         .back_container {
             background-size: 250%;
             background-position-x: -200px;
@@ -550,6 +798,7 @@ $(document).ready(function() {
             top: -70px;
         }
         }
+        
 </style>
 
 </html>
