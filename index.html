@@ -11,7 +11,7 @@
 <style>
 .slider-wrap {
 position: relative;
-margin-top: 10px;
+margin-top: 40px;
 width: 100%;
 }
 .slider {
@@ -179,7 +179,7 @@ $(document).ready(function() {
     .back_container {
         background-image:url('back_background.jpg');
         background-attachment: fixed;
-        background-size: 100%;
+        background-size: cover;
         background-position-y: -120px;
         background-repeat: no-repeat;
        
@@ -649,20 +649,22 @@ $(document).ready(function() {
         position: absolute;
         overflow: hidden;
         z-index: 999;
-        top: 100px;
+        top: 20px;
+        left: 52%;
+        transform: translate(-50%);
        
    
     }
     #big_choco_choco img {
         position: relative;
-        width: 100%;
+        width: 90%;
     }
 
     
           @media screen and (max-width: 900px) {
               .back_container {
                   background-position-y: -0px;
-                  background-size: 140%;
+                  background-size: cover;
               }
              
               .menuFixed{
@@ -738,15 +740,18 @@ $(document).ready(function() {
             }
           }
 
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 496px) {
         .third_container_text2{
             margin-top: 190px;
         }
+
         
         #big_choco_choco {
             position: absolute;
-            top:40px;
-
+            top:5px;
+            width: 75%;
+            left: 60%;
+            transform: translate(-50%);
         }
         .slider-wrap {
             position: relative;
@@ -759,6 +764,10 @@ $(document).ready(function() {
             font-size : 3px;
             height: 150px;
 
+        }
+
+        .back_background_second{
+            height: 400px
         }
         .back_background_second_container {
             height: 900px;
