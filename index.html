@@ -529,10 +529,12 @@ $(document).ready(function() {
         font-weight: 900;
         transition: 0.5s;
     }
+
     .third_menu:hover {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 30px;
     }
+
     /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
     .fourth_container {
     display: grid;
@@ -604,8 +606,8 @@ $(document).ready(function() {
        </div>
        <div id="small_title_container">
         <img src="small_title.png" id="small_title">
-        </div>
-        <div class="go_menu hide">MENU <span class="link">>></div></span>
+        </div><a href="menu.html">
+        <div class="go_menu hide">MENU <span class="link">>></div></a></span>
         <div class="scroll_container"><a href="#about_page" class="icon-scroll"></a></div>
     </div><scroll-page id="about_page">
     <div class="second_container">
@@ -635,7 +637,7 @@ $(document).ready(function() {
         <br> <span class="made_with_blabla hide">Made with low fat and fresh cream!</span>
       </div>
       <div class="third_container_text2 hide">
-        <span class="third_menu">저지방 메뉴<span class="link"> >></span>
+        <span class="third_menu">저지방 메뉴<span class="link"> >> </span>
         <div class="scroll3_container"><a href="#cooking_page" class="icon-scroll3"></a></div>
       </div></div>
     </div>
@@ -904,12 +906,12 @@ $(document).ready(function() {
                 font-size: 15pt;
             }
             .third_menu:hover {
-                padding-left: 10px;
-                padding-right: 10px;
+                padding-left: 0px;
+                padding-right: 0px;
             }
           }
 
-        @media screen and (max-width: 770px) {
+        @media screen and (max-width: 500px) {
         .footer {
             grid-template-columns: 0.5fr 0.5fr 0.6fr 1fr;
         }

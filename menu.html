@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="stylesheet" href="to_top2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">    
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uice Cream's Menu!</title>
+    <Script>
+            $( document ).ready( function() {
+        $( '.menu_ment' ).fadeIn( 800 );
+      } );
+    </Script>
+    <style>
+        .hide {
+            opacity: 0;
+        }
+
+        .hide2 {
+            opacity: 0;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        a:visited {
+            color: white;
+        }
+        html {
+        scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Noto Sans KR';
+            margin: 0px;
+        }
+        .location {
+            background-color: #ff6a9f;
+            color: white;
+            text-align: center;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-weight: 600;
+        }
+        .menu_title {
+           background-color: #ffea74;
+            text-align: center;
+            color: white;
+        }
+        .menu_logo {
+            font-weight: 600;
+            font-family: 'Rancho', cursive;
+            font-size: 20pt;
+            padding-top: 5px
+        }
+        .menu_ment {
+            font-weight: 800;
+            font-family: 'Secular One', sans-serif;
+            font-size: 100pt;
+            line-height: 90pt;
+            padding-top: 140px;
+            padding-bottom: 100px;
+            display: none;
+        }
+        .icecream_menu {
+            font-size: 15pt;
+            text-align: center;
+            padding-top: 150px; padding-bottom: 150px;
+        }
+        .menu_first{
+             width   : 150px;
+             height  : 50px;   
+             position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 25pt;
+        }
+        .menu_first:before {
+           content : "";
+             position: absolute;
+             transform: translate(-50%);
+             left    : 50%;
+             bottom  : 0;
+            height  : 1px;
+             width   : 80%; 
+             border-bottom:2px solid black;
+        }
+        .menu_first_sub {
+            padding-top: 10px;
+            font-size: 15pt
+        }
+        .grid {
+            width: 80%;
+            display: grid;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            grid-template-columns: 1fr 1fr 1fr ;  
+            grid-gap: 50px;
+            
+        }
+        .icecream {
+            
+            margin-bottom: 100px;
+            text-align: center; 
+            position: relative;
+            width: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .icecream {
+            display: inline-block;;
+            position: relative;
+        }
+
+        .icecream_info {
+            background-color: white;
+            color: black;
+        }
+
+        .info_name{
+             width   : 200px;
+             height  : 40px;   
+             position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 15pt;
+        }
+        .info_name:before {
+           content : "";
+             position: absolute;
+             transform: translate(-50%);
+             left    : 50%;
+             bottom  : 0;
+            height  : 1px;
+             width   : 100%; 
+             border-bottom:2px solid black;
+        }
+
+        /**/
+        .grid4 a {
+        color: white;
+        text-decoration-color: gray;
+    }
+    .grid4 i {
+        font-size: 15pt;
+        
+    }
+    .grid4_title {
+        color:gray;
+        font-size: 17pt;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    .grid4_{
+        text-align: right;
+        margin-right: 20px;
+    }
+    .grid1_ ,.grid2_, .grid3_,.grid4_ {
+        position: relative;
+        top: 45%;
+        transform: translate(0%, -50%)
+
+    }
+    .grid_title{
+        font-size: 15pt;
+        color:gray;
+    }
+    .grid3 i {
+        color: whitesmoke;
+        text-decoration: none;
+        font-size :13pt;
+    }
+    .footer {
+        background-color: black;
+        display :grid;
+        grid-template-columns: 0.33fr 0.33fr 0.33fr 1fr;
+        color: white;
+        text-align:right;
+        height: 300px;
+        font-size: 10pt;
+
+    }
+    .grid1, .grid2, .grid3, .grid4 {
+        display: inline;
+        position: relative;
+        
+        padding: 0px;
+        margin: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="location">
+        울산광역시 남구 중앙로120번길 대명루첸 상가 | 연중무휴 11:00~21:00
+    </div>
+    <div class="menu_title">
+        <div class="menu_logo"><a href="index.html">Uice Cream!</a></div>
+        <div class="menu_ment">Delicious Flavor! <br>Good Flavor!</div>
+    </div>
+    <div class="icecream_menu hide2">
+        <div class="menu_first">Menu</div>
+        <div class="menu_first_sub">다양한 메뉴는 현재 개발중입니다. 뚝딱</div>
+    </div>
+    <div class="grid">
+    <div class="icecream  hide">
+        <img src="icecream1.png">
+        <div class="icecream_info">
+            <div class="info_name">닐라닐라바닐라</div>
+            <div class="info_blabla">깔깔 재밌다</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream2.png">
+        <div class="icecream_info">
+            <div class="info_name">민트초코나무숲</div>
+            <div class="info_blabla">민트 아닐수도 있음</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream3.png">
+        <div class="icecream_info">
+            <div class="info_name">블루베리꾸덕</div>
+            <div class="info_blabla">맛있겠다</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream4.png">
+        <div class="icecream_info">
+            <div class="info_name">샤베트아이스크림</div>
+            <div class="info_blabla">건포도면 안먹어</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream5.png">
+        <div class="icecream_info">
+            <div class="info_name">피스타치오냠냠</div>
+            <div class="info_blabla">가끔 생각나는맛</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream6.png">
+        <div class="icecream_info">
+            <div class="info_name">얜무슨맛인지모르겠다</div>
+            <div class="info_blabla">인스타바에용 아이스크림</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream7.png">
+        <div class="icecream_info">
+            <div class="info_name">베리베리스트로베리</div>
+            <div class="info_blabla">무슨 맛 일까요</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream8.png">
+        <div class="icecream_info">
+            <div class="info_name">샤베샤베샤베트</div>
+            <div class="info_blabla">너도 무슨 맛이니</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream9.png">
+        <div class="icecream_info">
+            <div class="info_name">청포도풋사과무슨맛</div>
+            <div class="info_blabla">나는 풋사과에 한표 까만건뭐지</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream10.png">
+        <div class="icecream_info">
+            <div class="info_name">내취향칼로리폭팔</div>
+            <div class="info_blabla">한끼굶고먹어야해요</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream11.png">
+        <div class="icecream_info">
+            <div class="info_name">한라봉아이스크림</div>
+            <div class="info_blabla">제주도직수입</div></div></div>
+    <div class="icecream  hide">
+        <img src="icecream12.png">
+        <div class="icecream_info">
+            <div class="info_name">쿠앤크</div>
+            <div class="info_blabla">뇸뇸뇸</div></div></div>
+    </div>
+
+    <div class="footer" id="another_page">
+        <div class="grid1">
+            <div class="grid1_">
+            <div class="grid_title">ADDRESS</div>
+            울산광역시 남구 중앙로 120번길
+        </div></div>
+        <div class="grid2">
+            <div class="grid2_">
+            <div class="grid_title">TELL</div>
+            052-123-4567
+        </div></div>
+        <div class="grid3">
+            <div class="grid3_">
+            <div class="grid_title">Social Page</div>
+            <a href="https://www.instagram.com/zyuzyuzyu_/?hl=ko" target="_blank"><i class="fab fa-instagram-square"></i></a> 
+            |  <a href="https://www.facebook.com/people/%EA%B9%80%EC%A7%80%EC%9C%A0/100003686183487" target="_blank"><i class="fab fa-facebook-square"></i></a> 
+            |  <a href="#"></a><i class="fab fa-twitter-square"> |</i></a>
+        </div></div>
+        <div class="grid4">
+            <div class="grid4_">
+                <div class="grid4_title">Another Page?</div>
+                <div class="firstPage">
+                <i class="fas fa-walking"></i><br><a target="_blank" href="https://yuz2577.github.io/">https://yuz2577.github.io/</a> <br>
+                첫번째로 만든 연습사이트(일본어/한국어 지원 | 반응형 미완성)</div>
+                <div class="SecondPage">
+                <i class="fas fa-walking"></i><br> <a href="https://yuz2577.github.io/uice_cream.github.io/">https://yuz2577.github.io/uice_cream.github.io/</a> <br>
+                두번째로 만든 연습사이트(슬라이드 추가 | 반응형 개발진행)(현재 페이지)
+        </div></div>
+    </div>
+    <a id="back-to-top" href="#top">GO TO TOP</a>
+    <script async src="to_top.js"></script>
+    <script>
+    $(document).ready(function() {
+        /* 1 */
+        $(window).scroll( function(){
+            /* 2 */
+            $('.hide').each( function(i){
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                /* 3 */
+                if( bottom_of_window > bottom_of_object/1 ){
+                    $(this).animate({'opacity':'1'},800);
+                }
+            }); 
+            $('.hide2').each( function(i){
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                /* 3 */
+                if( bottom_of_window > bottom_of_object/1 ){
+                    $(this).animate({'opacity':'1'},800);
+                }
+            }); 
+        });
+    });
+
+</script>
+    
+</body>
+</html>
