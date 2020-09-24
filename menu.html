@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    
     <script
     src="https://code.jquery.com/jquery-3.5.1.js"
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
     <title>Uice Cream's Menu!</title>
     <Script>
             $( document ).ready( function() {
@@ -48,11 +48,15 @@
             padding-top: 5px;
             padding-bottom: 5px;
             font-weight: 600;
-        }
+            position: relative;
+            width: 100%;
+           }
         .menu_title {
            background-color: #ffea74;
             text-align: center;
             color: white;
+            position: relative;
+            width: 100%;
         }
         .menu_logo {
             font-weight: 600;
@@ -63,7 +67,7 @@
         .menu_ment {
             font-weight: 800;
             font-family: 'Secular One', sans-serif;
-            font-size: 100pt;
+            font-size: 90pt;
             line-height: 90pt;
             padding-top: 140px;
             padding-bottom: 100px;
@@ -94,8 +98,10 @@
         }
         .menu_first_sub {
             padding-top: 10px;
-            font-size: 15pt
+            font-size: 15pt;
+
         }
+
         .grid {
             width: 80%;
             display: grid;
@@ -103,7 +109,9 @@
             left: 50%;
             transform: translate(-50%);
             grid-template-columns: 1fr 1fr 1fr ;  
+            grid-template-rows: 1fr 1fr 1fr;
             grid-gap: 50px;
+            flex-wrap: wrap;
             
         }
         .icecream {
@@ -115,7 +123,7 @@
             left: 50%;
             transform: translate(-50%);
         }
-        .icecream {
+        .icecream img {
             display: inline-block;;
             position: relative;
         }
@@ -209,6 +217,7 @@
         <div class="menu_first">Menu</div>
         <div class="menu_first_sub">다양한 메뉴는 현재 개발중입니다. 뚝딱</div>
     </div>
+    <div class="grid_container">
     <div class="grid">
     <div class="icecream  hide">
         <img src="icecream1.png">
@@ -270,7 +279,7 @@
         <div class="icecream_info">
             <div class="info_name">쿠앤크</div>
             <div class="info_blabla">뇸뇸뇸</div></div></div>
-    </div>
+    </div></div>
 
     <div class="footer" id="another_page">
         <div class="grid1">
@@ -295,10 +304,10 @@
                 <div class="grid4_title">Another Page?</div>
                 <div class="firstPage">
                 <i class="fas fa-walking"></i><br><a target="_blank" href="https://yuz2577.github.io/">https://yuz2577.github.io/</a> <br>
-                첫번째로 만든 연습사이트(일본어/한국어 지원 | 반응형 미완성)</div>
+                첫번째로 만든 연습사이트(일본어/한국어 지원 | 반응형 50%개발완료)</div>
                 <div class="SecondPage">
                 <i class="fas fa-walking"></i><br> <a href="https://yuz2577.github.io/uice_cream.github.io/">https://yuz2577.github.io/uice_cream.github.io/</a> <br>
-                두번째로 만든 연습사이트(슬라이드 추가 | 반응형 개발진행)(현재 페이지)
+                두번째로 만든 연습사이트(슬라이드 추가 | 반응형 50%개발완료)(현재 페이지)
         </div></div>
     </div>
     <a id="back-to-top" href="#top">GO TO TOP</a>
@@ -328,6 +337,150 @@
     });
 
 </script>
+<style>
+      @media screen and (max-width: 600px) {
+        .location {
+          
+            font-size: 5pt;
+           }
+        .menu_title {
+
+        }
+        .menu_logo {
+            font-weight: 600;
+            font-family: 'Rancho', cursive;
+            font-size: 20pt;
+            padding-top: 5px
+        }
+        .menu_ment {
+            font-weight: 800;
+            font-family: 'Secular One', sans-serif;
+            font-size: 70pt;
+            line-height: 70pt;
+            padding-top: 140px;
+            padding-bottom: 100px;
+            display: none;
+        }
+        .icecream_menu {
+            font-size: 15pt;
+            text-align: center;
+            padding-top: 150px; padding-bottom: 150px;
+        }
+        .menu_first{
+             width   : 150px;
+             height  : 50px;   
+             position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 25pt;
+        }
+        .menu_first:before {
+           content : "";
+             position: absolute;
+             transform: translate(-50%);
+             left    : 50%;
+             bottom  : 0;
+            height  : 1px;
+             width   : 80%; 
+             border-bottom:2px solid black;
+        }
+        .menu_first_sub {
+            padding-top: 10px;
+            font-size: 15pt;
+
+        }
+
+        .grid {
+            width: 50%;
+            display: grid;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            grid-template-rows: 1fr 1fr 0fr;
+            grid-template-columns: 0fr;
+            grid-gap: 0px;
+            flex-wrap: wrap;
+            
+        }
+        .icecream {
+            
+            margin-bottom: 100px;
+            text-align: center; 
+            position: relative;
+            width: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .icecream img {
+            display: inline-block;;
+            position: relative;
+        }
+
+        .icecream_info {
+            background-color: white;
+            color: black;
+        }
+
+        .info_name{
+             width   : 200px;
+             height  : 40px;   
+             position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 15pt;
+        }
+        .info_name:before {
+           content : "";
+             position: absolute;
+             transform: translate(-50%);
+             left    : 50%;
+             bottom  : 0;
+            height  : 1px;
+             width   : 100%; 
+             border-bottom:2px solid black;
+        }
+        /**/
+        .grid4 i {
+        font-size: 12pt;
+        
+    }
+    .grid4_title {
+        color:gray;
+        font-size: 15pt;
+        font-weight: 900;
+        margin-bottom: 10px;
+    }
+    .grid4_{
+        text-align: right;
+        margin-right: 20px;
+    }
+    .grid1_ ,.grid2_, .grid3_,.grid4_ {
+        position: relative;
+        top: 45%;
+        transform: translate(0%, -50%)
+
+    }
+    .grid_title{
+        font-size: 10pt;
+        color:gray;
+    }
+    .grid3 i {
+        color: whitesmoke;
+        text-decoration: none;
+        font-size :8pt;
+    }
+    .footer {
+        background-color: black;
+        display :grid;
+        grid-template-columns: 0.33fr 0.33fr 0.33fr 1fr;
+        color: white;
+        text-align:right;
+        height: 300px;
+        font-size: 5pt;
+
+    }
+      }
+</style>
     
 </body>
 </html>
