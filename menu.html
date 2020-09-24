@@ -103,7 +103,7 @@
         }
 
         .grid {
-            width: 80%;
+            width: 100%;
             display: grid;
             position: relative;
             left: 50%;
@@ -391,29 +391,31 @@
         }
 
         .grid {
-            width: 50%;
+            
+            width: 80%;
             display: grid;
             position: relative;
             left: 50%;
             transform: translate(-50%);
-            grid-template-rows: 1fr 1fr 0fr;
-            grid-template-columns: 0fr;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
             grid-gap: 0px;
             flex-wrap: wrap;
             
         }
         .icecream {
-            
+
             margin-bottom: 100px;
             text-align: center; 
             position: relative;
             width: 100%;
-            left: 50%;
-            transform: translate(-50%);
         }
         .icecream img {
             display: inline-block;;
             position: relative;
+            width: 100%;
+            left: 50%;
+            transform: translate(-50%);
         }
 
         .icecream_info {
@@ -479,6 +481,36 @@
         font-size: 5pt;
 
     }
+      }
+
+      @media screen and (max-width: 530px)  {
+  .grid {
+            
+            width: 80%;
+            display: grid;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr;
+            grid-gap: 0px;
+            flex-wrap: wrap;
+            
+        }
+        .icecream {
+            
+            margin-bottom: 100px;
+            text-align: center; 
+            position: relative;
+            width: 100%;
+        }
+        .icecream img {
+            display: inline-block;;
+            position: relative;
+            width: 100%;
+            left: 50%;
+            transform: translate(-50%);
+        }
       }
 </style>
     
