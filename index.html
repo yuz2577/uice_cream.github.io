@@ -308,7 +308,50 @@ $(document).ready(function() {
 
 
     </script>
-    
+     <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
+            $(elm).each(function (index) {
+                // 개별적으로 Wheel 이벤트 적용
+                $(this).on("mousewheel DOMMouseScroll", function (e) {
+                    e.preventDefault();
+                    var delta = 0;
+                    if (!event) event = window.event;
+                    if (event.wheelDelta) {
+                        delta = event.wheelDelta / 10;
+                        if (window.opera) delta = -delta;
+                    } 
+                    else if (event.detail)
+                        delta = -event.detail / 3;
+                    var moveTop = $(window).scrollTop();
+                    var elmSelecter = $(elm).eq(index);
+                    // 마우스휠을 위에서 아래로
+                    if (delta < 0) {
+                        if ($(elmSelecter).next() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).next().offset().top;
+                            }catch(e){}
+                        }
+                    // 마우스휠을 아래에서 위로
+                    } else {
+                        if ($(elmSelecter).prev() != undefined) {
+                            try{
+                                moveTop = $(elmSelecter).prev().offset().top;
+                            }catch(e){}
+                        }
+                    }
+                     
+                    // 화면 이동 0.8초(800)
+                    $("html,body").stop().animate({
+                        scrollTop: moveTop + 'px'
+                    }, {
+                        duration: 100, complete: function () {
+                        }
+                    });
+                });
+            });
+        }
+    </script>
 </head>
 <style>
     .slide_right {
@@ -531,8 +574,15 @@ $(document).ready(function() {
     }
 
     .third_menu:hover {
-        padding-left: 10px;
-        padding-right: 30px;
+        margin: 20px;
+       
+
+    }
+
+    .third_menu a {
+        text-decoration: none;
+        color: white;
+    
     }
 
     /**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
@@ -597,7 +647,7 @@ $(document).ready(function() {
             <a href="#"><img src="logo.png"></a>
         </div>
       </div>
-    <div class="first_container">
+    <div class="first_container box">
       <div id="title_icecream_container"> 
         <img src="title_icecream.png" id="title_icecream">
        </div>
@@ -637,7 +687,7 @@ $(document).ready(function() {
         <br> <span class="made_with_blabla hide">Made with low fat and fresh cream!</span>
       </div>
       <div class="third_container_text2 hide">
-        <span class="third_menu">저지방 메뉴<span class="link"> >> </span>
+        <span class="third_menu"><a href="menu.html">저지방 메뉴<span class="link"> >> </a></span>
         <div class="scroll3_container"><a href="#cooking_page" class="icon-scroll3"></a></div>
       </div></div>
     </div>
